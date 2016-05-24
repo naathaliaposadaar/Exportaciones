@@ -14,8 +14,7 @@ if (!isset($_SESSION["oUsuario"])){
 </script>
 <?php 
 }
-
 $oUsr=$_SESSION["oUsuario"];
-var_dump($oUsr);
-if($oP->insert()) echo "producto ingresado"; else echo "ERROR";
+//var_dump($oUsr);
+if($oP->insert($nombre,$total,$anno,$oUsr->getIdacceso())) echo "producto ingresado"; else echo "ERROR";
 ?>
