@@ -1,8 +1,11 @@
 <?php
 include("../librerias.php");
+session_start();
 //recuperar sesion
 $oPro=new Producto();
-$idacceso = $_POST['idacceso'];
+var_dump($oUsr);
+$oUsr=$_SESSION["oUsuario"];
+$idacceso = $oUsr->getIdacceso();
 foreach ($_POST as $id){
     
 	$oPro->Elimina($id,$idacceso);	
